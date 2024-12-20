@@ -1,0 +1,146 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    overflow: hidden;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 20px;
+}
+
+.img{
+    height: 50px;
+    border-radius: 50px;
+}
+
+ul li {
+    display: inline-block;
+}
+ul li a {
+    text-decoration: none;
+    margin: 0 10px;
+    color: white;
+}
+
+section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    margin: auto;
+    color: white;
+    margin-top: 50px;
+}
+
+.textt{
+    width: 30%;
+}
+.textt h2 {
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.textt p {
+    font-size: 18px;
+    margin:20px 0 ;
+}
+.imgy{
+    width: 20%;
+}
+
+.icons {
+    position: absolute;
+    bottom: 50px;  
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    gap: 10px; 
+}
+
+.icons img {
+    width: 50px;
+    transition: 0.5s;
+    cursor: pointer;
+    padding: 10px;
+}
+.icons img:hover{
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .icons img {
+        width: 40px; 
+    }
+    .icons {
+        bottom: 40px;  
+    }
+
+    ul {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    ul li {
+        margin: 5px 0;
+    }
+
+    section {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .textt {
+        width: 100%;
+        text-align: center;
+    }
+
+    .textt h2 {
+        font-size: 30px;
+    }
+
+    .imgy {
+        width: 80%;
+        margin: 20px auto;
+    }
+   
+}
+
+@media (max-width: 480px) {
+    .textt h2 {
+        font-size: 24px;
+    }
+
+    .textt p {
+        font-size: 16px;
+    }
+
+    .imgy {
+        width: 100%;
+    }
+    .icons img {
+        width: 35px; 
+    }
+    .icons {
+        bottom: 0%;  
+    }
+    .container{
+        height: 128vh;
+    }
+}
